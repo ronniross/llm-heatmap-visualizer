@@ -105,8 +105,9 @@ The provided script uses `bert-base-uncased`, a dense model with 12 layers and 1
 
 **Here's an experimental explanation for the differences we can perceive:**
 
-For the simpler query, attention patterns are generally less complex. While initial layers show structured local attention, many later layers may appear more diffuse. This suggests that the model captures sufficient information for simpler tasks in early layers, with less need for highly specific, complex interactions deeper in the network. 
-This could suggest that the model captures sufficient information for simpler tasks in earlier layers, with less need for highly specific and complex interactions deeper in the network. Fewer attention heads seem to display uniquely specialized or sharply focused patterns, possibly indicating less intensive utilization of the full range of the model's relational capabilities for such inputs.
+For the simpler query, attention patterns are less complex. While initial layers show structured local attention, many later layers appear more diffuse. 
+This suggests that the model captures sufficient information for simpler tasks in early layers, with less need for highly specific, complex interactions deeper in the network. 
+Fewer attention heads seem to display uniquely specialized or sharply focused patterns, possibly indicating less intensive utilization of the full range of the model's relational capabilities for such inputs.
 
 In contrast, the more complex query appears to elicit significantly more structured, sharper, and varied attention patterns, with increased complexity in the later layers. 
 This can indicate that deeper layers are more actively engaged in processing abstract relationships and longer-range dependencies required by the task's complexity.
