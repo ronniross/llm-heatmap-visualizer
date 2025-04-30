@@ -2,7 +2,7 @@
 
 Full Attention Head Visualization for Language Models
 
-This repository provides a set of scripts to generate **full attention-head heat-maps** for transformer-based LLMs, enabling researchers to visualize how different components of input prompts, system instructions, and auxiliary systems influence the model's internal attention patterns.
+This repository provides a set of Python scripts to generate **full attention-head heat-maps** for transformer-based LLMs, enabling researchers to visualize how different components of input prompts, system instructions, and auxiliary systems influence the model's internal attention patterns.
 
 By analyzing these heatmaps across all layers and heads you can gain insights into how the model processes information, identifies relationships between tokens, and prioritizes specific parts of the input during inference.
 
