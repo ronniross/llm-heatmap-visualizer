@@ -138,9 +138,18 @@ To further isolate the impact of conceptual complexity from mere input length, I
 Experiment 2's visualization led to interesting observations. We can see that even with the same number of tokens in both inputs, the simpler query still displays less complex attention patterns than the more demanding one. This confirms that heatmap complexity increases not only when the number of tokens is raised, but also significantly when the query itself is more complex. This is an important and foundational observation we can now use as a base to discover new patterns.
 
 
+## 2. Python Script - Detailed Grid Visualization (second_heatmap.py and second_heatmap.ipynb)
+
+Similar to the first full visualization, this script focuses on one layer and head but adds grid lines for clearer demarcation between token relationships.
+
+This detailed view clarifies specific token interactions on the heatmap, complementing the full visualization for inspecting individual layer-head behavior. Background modes (white/dark) can be adjusted.
+
+<div align="center">
+  <img src=".github/second_heatmap.png" alt="Visualization of how embeddings are saved" />
+</div>
+
 > This project is licensed under the MIT License.
 > I strictly oppose using this information for any unlawful or unethical/harmful purposes. I am not liable for any improper use of the information shared in this repository.
-
 
 ## Rules
 
