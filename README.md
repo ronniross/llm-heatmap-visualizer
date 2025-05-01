@@ -118,9 +118,9 @@ These differences demonstrate how the complexity and nature of the input query p
 
 To further isolate the impact of conceptual complexity from mere input length, I present now a second experiment comparing attention patterns for inputs that have the same number of tokens but differ significantly in their cognitive demands.
 
-Simple, same-length query: "Tell me a very simple short story." (8 tokens)
+1. Simple query: ```Tell me a very simple short story.``` (8 tokens)
 
-Complex, same-length query: "Explain the core idea behind quantum entanglement." (8 tokens)
+2. Complex query: ```Explain the core idea behind quantum entanglement.``` (8 tokens)
 
 **.ipynb file updated.**
 
