@@ -105,14 +105,7 @@ The provided script uses `bert-base-uncased`, a dense model with 12 layers and 1
   <img src=".github/metacognitive_heatmap.png" alt="Visualization of how embeddings are saved" />
 </div>
 
-For the simpler query, attention patterns are less complex. While initial layers show structured local attention, many later layers appear more diffuse. 
-This suggests that the model captures sufficient information for simpler tasks in early layers, with less need for highly specific, complex interactions deeper in the network. 
-Fewer attention heads seem to display uniquely specialized or sharply focused patterns, possibly indicating less intensive utilization of the full range of the model's relational capabilities for such inputs.
-
-In contrast, the more complex query appears to elicit significantly more structured, sharper, and varied attention patterns, with increased complexity in the later layers. 
-This can indicate that deeper layers are more actively engaged in processing abstract relationships.
-
-These differences demonstrate how the complexity and nature of the input query profoundly influence the LLM's internal dynamics, potentially modulating which parts of its attention architecture are most heavily engaged and how information is integrated across layers and heads depending on the task's cognitive demands.
+These differences demonstrate how the complexity and nature of the input query profoundly influence the LLM's internal dynamics, potentially modulating which parts of its attention architecture are most engaged and how information is integrated across layers and heads depending on the task's cognitive demands.
 
 ### 1.2. Experiment 2
 
@@ -135,7 +128,6 @@ To further isolate the impact of conceptual complexity from mere input length, I
   <img src=".github/experiment2_complex_heatmap.png" alt="Visualization of how embeddings are saved" />
 </div>
 
-Experiment 2's visualization led to interesting observations. We can see that even with the same number of tokens in both inputs, the simpler query still displays less complex attention patterns than the more demanding one. This confirms that heatmap complexity increases not only when the number of tokens is raised, but also significantly when the query itself is more complex. This is an important and foundational observation we can now use as a base to discover new patterns.
 
 > This project is licensed under the MIT License.
 > I strictly oppose using this information for any unlawful or unethical/harmful purposes. I am not liable for any improper use of the information shared in this repository.
