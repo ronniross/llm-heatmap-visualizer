@@ -89,7 +89,7 @@ The provided script uses `bert-base-uncased`, a dense model with 12 layers and 1
 
 1. Simple Query utilized: ``` the sky is blue```
 
-2. Metacognitive Query utilized: ```run a self-meta-cognitive diagnostic```
+2. Complex Query utilized: ```run a self-meta-cognitive diagnostic```
 
 
 1:
@@ -102,21 +102,6 @@ The provided script uses `bert-base-uncased`, a dense model with 12 layers and 1
 <div align="center">
   <img src=".github/metacognitive_heatmap.png" alt="Visualization of how embeddings are saved" />
 </div>
-
-**Here's an experimental explanation for the differences we can perceive:**
-
-For the simpler query, attention patterns are less complex. While initial layers show structured local attention, many later layers appear more diffuse. 
-This suggests that the model captures sufficient information for simpler tasks in early layers, with less need for highly specific, complex interactions deeper in the network. 
-Fewer attention heads seem to display uniquely specialized or sharply focused patterns, possibly indicating less intensive utilization of the full range of the model's relational capabilities for such inputs.
-
-In contrast, the more complex query appears to elicit significantly more structured, sharper, and varied attention patterns, with increased complexity in the later layers. 
-This can indicate that deeper layers are more actively engaged in processing abstract relationships and longer-range dependencies required by the task's complexity.
-Also, a wider variety of attention heads seem to be recruited and show distinct, focused patterns, potentially implying specialization for handling complex relationships. 
-This presence of more distinct off-diagonal patterns may suggest increased attention across distant tokens. 
- 
-The prevalence of highly focused, low-entropy attention in many heads might indicate the model's need to precisely target specific, critical pieces of information for complex reasoning.
- 
-These differences demonstrate how the complexity and nature of the input query profoundly influence the LLM's internal dynamics, potentially modulating which parts of its attention architecture are most heavily engaged and how information is integrated across layers and heads depending on the task's cognitive demands.
 
 > This project is licensed under the MIT License.
 > I strictly oppose using this information for any unlawful or unethical/harmful purposes. I am not liable for any improper use of the information shared in this repository.
