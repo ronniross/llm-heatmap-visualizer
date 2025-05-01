@@ -1,4 +1,4 @@
-# LLM Heatmap Visualizer v 1.0.0
+# LLM Heatmap Visualizer v 1.0.1
 
 Full Attention Head Visualization for Language Models
 
