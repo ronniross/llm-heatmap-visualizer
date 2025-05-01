@@ -85,7 +85,7 @@ ls -l attention_heads.png
 ```
 **An .ipynb file (runnable directly on Google Colab) and a simpler version of the .py file (with white background) have been added to the main branch.**
 
-The provided script uses `bert-base-uncased`, a dense model with 12 layers and 12 attention heads per layer, to demonstrate how attention patterns differ between simple queries and the ones where the model requires a more complex reasoning, distinctive complexity levels.
+The provided script uses `bert-base-uncased`, a dense model with 12 layers and 12 attention heads per layer, to demonstrate how attention patterns differ between simple queries and the ones where the model requires a more complex reasoning.
 
 
 ### 1.1. Experiment 1
