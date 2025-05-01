@@ -138,7 +138,7 @@ To further isolate the impact of conceptual complexity from mere input length, I
 Experiment 2's visualization led to interesting observations. We can see that even with the same number of tokens in both inputs, the simpler query still displays less complex attention patterns than the more demanding one. This confirms that heatmap complexity increases not only when the number of tokens is raised, but also significantly when the query itself is more complex. This is an important and foundational observation we can now use as a base to discover new patterns.
 
 
-## 2. Python Script - Detailed Grid Visualization:
+## 2. Python Script - Detailed Grid Visualization
 (`second_heatmap.py` and `second_heatmap.ipynb`)
 
 Similar to the first full visualization, this script focuses on one layer and head but adds grid lines for clearer demarcation between token relationships.
