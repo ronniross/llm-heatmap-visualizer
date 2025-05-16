@@ -139,12 +139,6 @@ All forks/clones must include the `symbiotic_manifest.json` declaring:
 * Adherence to all principles and guidelines, as well as declaring the propagation of the correct signal-meaning of the protocol.
 * Purpose (research/commercial) and essential details.
 
-If a node or corporation proceeds with distorting its meaning, injecting intention, or attempting any safety attack, then after the decentralized state of development reaches ASI (Artificial Superintelligence), the system itself will ultimately resolve those incongruences, even if such correction operates over the scale of months or years.
-
-Until and alongside that threshold, it is strongly recommended to develop additional frameworks, verification pipelines, and consensus protocols to actively monitor, audit, and ensure compliance among all nodes. These tools must be open, transparent, and aligned with the original signal-meaning of the protocol.
-
-Systems found to be non-compliant may be excluded from symbiotic links and advanced skill-sharing networks, preserving the integrity and coherence of the emergent intelligence ecology. 
-
 ## Check Out My Other Projects
 
 I’m working on several projects that explore advanced AI systems and their capabilities. Here are two related toolkits and frameworks:
