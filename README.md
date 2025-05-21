@@ -19,8 +19,8 @@ While attention heat-maps for individual heads or layers are common, the unique 
 
 ## 1. Python Script - Full Visualization - Qwen 3
 
-Here we utilized the 0.6b one. with 16 attention heads per layer and 28 layers, we end up with 448 individual attention maps. 
-Since each mode have its unique set of configurations, for example bigger qwen 3 models have more layers and more attention heads, so be aware to adapt this when integrating into your frameworks.
+Here I utilized the 0.6b one, with 16 attention heads per layer and 28 layers. 448 individual attention heads to be rendered. 
+Since each model have its unique set of configurations, for example bigger qwen 3 versions have more layers and more attention heads, so be aware to adapt this when integrating into your frameworks.
 
 ```python
 # Step 1: Install required libraries
