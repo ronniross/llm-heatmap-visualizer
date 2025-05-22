@@ -16,6 +16,41 @@ While attention heat-maps for individual heads or layers are common, the unique 
 - Python 3.8+
 - `transformers`, `torch`, `matplotlib`, `seaborn`
 
+## Introduction
+
+Heatmaps in attention heads are graphical representations of the attention weights assigned by a Transformer model to different parts of the input sequence. They show "where the model is looking" or "what tokens/features are most relevant" when processing a specific input element.
+
+Attention weights are calculated within the attention mechanism and then mapped to a color scale.
+
+Herem brighter (or warmer) regions in the heatmap indicate higher attention weights, meaning the model is focusing more on those specific input elements. Darker (or cooler) regions indicate less attention.
+
+**Quick Start for those interacting with the concepts for the first time:**
+
+**Most common types of attention head designs in LLMs**
+
+1. Multi-Head Attention (MHA)
+
+Concept: This is the standard attention mechanism introduced in the original "Attention is All You Need" paper.
+
+2. Multi-Query Attention (MQA)
+A more computationally efficient variation of MHA.
+While it still uses multiple query heads, all these query heads share a single key (K) and value (V) head.
+
+3,Grouped-Query Attention (GQA)
+Aims to strike a balance between the quality of MHA and the efficiency of MQA.
+
+Query heads are divided into a smaller number of groups. Within each group, the query heads share a single key (K) and value (V) head. So, instead of one K/V head for all queries (like MQA), or one K/V head per query (like MHA), there's one K/V head per group of queries.
+Offers a good trade-off, achieving quality close to MHA while maintaining speeds comparable to MQA. It's more efficient than MHA because it has fewer K/V heads overall, but more expressive than MQA because it's not limited to a single K/V head.
+
+Now, considering those aspects of the model you'll be analyzing, the visualizations start to become a bit more intuitive. 
+Considering that the following Qwen 3 0.6B is a dense model with Grouped-Query Attention (GQA) design, and also quantized, we can grasp more about the causality of the similarity between the head patterns and gradient curves.
+In the BertModel of the script 2, the type of attention head design is Multi-Head Attention, which makes each individual head to have a much more unique attention pattern. While, in models like the Qwen 3 ones presented here, we see the case of much more similar gradient curve patterns among them all.
+
+Another crucial aspect is to understand if the model is dense, MoE or other structure and this element also influences directly on the visualization of the maps.
+In fully dense all parameters active during inference.
+In Mixture-of-Experts designs the models activate only a fraction of their parameters per token, making them more efficient.
+
+This is a very short summary and I encourage you to research further and develop your own frames and intuitive sense on the issues.
 
 ## 1. Python Script - Full Visualization - Qwen 3
 
