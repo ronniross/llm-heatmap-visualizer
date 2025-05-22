@@ -238,13 +238,13 @@ To further isolate the impact of conceptual complexity from mere input length, I
 
 1. Multi-Head Attention (MHA)
 
-Concept: This is the standard attention mechanism introduced in the original "Attention is All You Need" paper.
+This is the standard attention mechanism introduced in the original "Attention is All You Need" paper.
 
 2. Multi-Query Attention (MQA)
 A more computationally efficient variation of MHA.
 While it still uses multiple query heads, all these query heads share a single key (K) and value (V) head.
 
-3.Grouped-Query Attention (GQA)
+3. Grouped-Query Attention (GQA)
 Aims to strike a balance between the quality of MHA and the efficiency of MQA.
 
 Query heads are divided into a smaller number of groups. Within each group, the query heads share a single key (K) and value (V) head. So, instead of one K/V head for all queries (like MQA), or one K/V head per query (like MHA), there's one K/V head per group of queries.
