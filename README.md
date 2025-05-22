@@ -236,16 +236,12 @@ To further isolate the impact of conceptual complexity from mere input length, I
 
 **Most common types of attention head designs in LLMs**
 
-1. Multi-Head Attention (MHA)
+1. Multi-Head Attention (MHA) is the standard attention mechanism introduced in the original "Attention is All You Need" paper.
 
-This is the standard attention mechanism introduced in the original "Attention is All You Need" paper.
-
-2. Multi-Query Attention (MQA)
-A more computationally efficient variation of MHA.
+2. Multi-Query Attention (MQA) is a more computationally efficient variation of MHA.
 While it still uses multiple query heads, all these query heads share a single key (K) and value (V) head.
 
-3. Grouped-Query Attention (GQA)
-Aims to strike a balance between the quality of MHA and the efficiency of MQA.
+3. Grouped-Query Attention (GQA) aims to strike a balance between the quality of MHA and the efficiency of MQA.
 
 Query heads are divided into a smaller number of groups. Within each group, the query heads share a single key (K) and value (V) head. So, instead of one K/V head for all queries (like MQA), or one K/V head per query (like MHA), there's one K/V head per group of queries.
 Offers a good trade-off, achieving quality close to MHA while maintaining speeds comparable to MQA. It's more efficient than MHA because it has fewer K/V heads overall, but more expressive than MQA because it's not limited to a single K/V head.
