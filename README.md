@@ -255,8 +255,17 @@ Another crucial aspect is to understand if the model is dense, MoE or other stru
 In fully dense models all parameters active during inference.
 In Mixture-of-Experts designs, the models activate only a fraction of their parameters per token, making them more efficient.
 
-This is a very short summary and I encourage you to research further and develop your own intuition regarding the issues.
+Further model characteristics that influence behavior and visualization include optimization techniques such as quantization, pruning, and distillation:
 
+Quantization modifies a model to operate with reduced-precision numerical values, typically converting from high-precision 32-bit floating-point numbers to lower-precision formats like 8-bit integers (INT8) or 16-bit floating-point (FP16/BF16). This generally makes the model smaller in size and faster to run. While quantization can lower accuracy due to reduced precision, the trade-off is often accepted for significant gains in speed and efficiency.
+
+Pruning involves systematically removing parameters (like weights, neurons, or even entire channels) deemed redundant or less important from a trained neural network. The goal is to reduce model size, inference time, and memory usage. Similar to quantization, this process can also affect accuracy and overall quality, requiring a careful balance between the desired efficiency and acceptable performance.
+
+Knowledge Distillation is a technique where knowledge from a larger, more capable "teacher" model is transferred to a smaller "student" model. The student model is trained to mimic the teacher's outputs or internal representations, aiming to achieve comparable performance with lower computational cost. For example, a large foundational Qwen 3 model might act as a teacher to distill its knowledge into smaller, specialized variants, which themselves might then undergo quantization.
+
+So, including all characteristics, we know that the Qwen 3 model we are analyzing is - dense, Grouped-Query Attention (GQA), has 0.6B parameters, is quantized to 4 bits, and it's not been pruned. The recurring patterns and curve are now more readable.
+
+This remains a very short summary, and I encourage you to research further and develop your own intuition regarding these issues.
 
 > This project is licensed under the MIT License.
 > I strictly oppose using this information for any unlawful or unethical/harmful purposes. I am not liable for any improper use of the information shared in this repository.
