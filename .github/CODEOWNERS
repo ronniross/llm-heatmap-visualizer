@@ -16,6 +16,7 @@
  # *.csv @ronniross
  # *.pkl @ronniross
  # *.txt @ronniross
+ # *.ipynb @ronniross
  
  # Important configuration files
  # /config/main_config.yaml @ronniross
